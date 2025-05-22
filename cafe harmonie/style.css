@@ -1,0 +1,607 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, /* summary, */
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: none;
+font-style: normal;
+text-align: left;
+zoom: 1;
+list-style: none;
+}
+article, aside, details, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+table {
+border-collapse: collapse;
+font-family: inherit;
+}
+h1,h2,h3,h4,h5 {
+font-size: 100%;
+font-weight: normal;
+line-height: 1;
+}
+input,textarea,select {
+font-family: inherit;
+font-size: 16px;
+}
+input[type="button"],input[type="text"],input[type="submit"] {
+-webkit-appearance: none;
+border-radius: 0;
+}
+textarea {
+resize: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+th,td {
+border-collapse: collapse;
+}
+table th,table td {
+white-space: nowrap;
+}
+ul,ol {
+list-style-type: none;
+}
+img {
+vertical-align: text-bottom;
+vertical-align: -webkit-baseline-middle;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+  }
+
+
+
+ /* 全体フォント */
+body {
+  font-family: 'Zen Kaku Gothic New', 'Instrument Sans', sans-serif;
+  background-color: #f5ede5;
+  color: #4e3b2c;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 英文見出し（Script） */
+.section-title {
+  font-family: 'League Script', cursive;
+  font-size: 2.5em;
+  color: #6b4c3b;
+  margin-bottom: 10px;
+}
+
+/* ヘッダー全体 */
+.header {
+  background-color: #dcc8b6;
+  
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+/* ヘッダー内の整列 */
+.header-inner {
+  display: flex;
+  padding: 0 24px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  height: 80px;
+  
+}
+
+/* ロゴ画像のスタイル */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* PC：通常ナビ表示、スマホでは非表示 */
+.nav {
+  display: block;
+}
+.hamburger-overlay,
+.nav-overlay {
+  display: none;
+}
+
+/* ナビゲーション */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-sns {
+  display: flex;
+  gap: 24px;
+  margin-left: 48px;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+
+.nav a {
+  text-decoration: none;
+  color: #4e3b2c;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: color .3s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+
+/* アイコン画像のスタイル */
+.nav img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* hero セクション全体 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* スライドショー */
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* 画面幅いっぱい */
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* キャッチコピー */
+.hero-copy {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 1s;
+  z-index: 2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* キャッチコピーのフェードインアニメーション */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+/* スマホ用・PC用表示切り替え */
+.pc {
+  display: block;
+}
+.sp {
+  display: none;
+}
+
+
+/* コンセプト */
+#concept {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #D7C6B6 0%, #D7C6B6 56%, #F4E7E1 100%);
+}
+
+/* 共通：Google Fonts 読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&family=League+Script&display=swap');
+
+/* タイトルとサブタイトルの親コンテナ */
+.section-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* セクションタイトル（Instrument Sans） */
+.section-title {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 2.5rem;
+  font-style: bold;
+  text-align: center;
+  margin: 0;
+}
+
+/* 斜めに重ねるカフェ名などのサブタイトル */
+.section-subtitle {
+  position: absolute;
+  top: 100%;           /* タイトルの下に配置 */
+  left: 50%;           /* 右寄りに調整（必要に応じて調整） */
+  transform: rotate(-5.92deg) translateY(-50%);
+  white-space: nowrap;
+  font-size: 1.8rem;
+  pointer-events: none;
+}
+
+/* 特定の書体スタイル（例：カフェ名） */
+.cafe-name {
+  font-family: 'League Script', cursive;
+  color: #D30000;
+}
+
+/* コンセプトセクションのスタイル */
+.concept-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.concept-slideshow {
+  flex: 1 1 45%;
+  position: relative;
+  min-width: 300px;
+  height: 100vh;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.concept-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.concept-slide.active {
+  opacity: 1;
+}
+
+.concept-text {
+  flex: 1 1 45%;
+  padding: 20px;
+}
+
+.concept-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cafe-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.concept-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.concept-line {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding-bottom: 15px;
+  margin: 0 auto;
+}
+
+#concept h3 {
+  display: inline-block;
+  position: relative;
+}
+
+#concept .concept-line {
+  width: 100%;
+}
+
+.concept-text p {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text-deco {
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+  width: 50%; /* 必要に応じて調整 */
+  height: auto;
+}
+
+
+/* メニュー部分 */
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.menu-items img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+form input,
+form textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #a3826c;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #dcc8b6;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+/* スマホ用スタイル */
+@media screen and (max-width: 768px) {
+
+  .nav {
+    display: none;
+  }
+  .hamburger-overlay,
+  .nav-overlay {
+    display: block;
+  }
+
+  /* overlay-styles.css */
+.hamburger-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger-overlay__line {
+  position: absolute;
+  left: 11px;
+  width: 26px;
+  height: 2px;
+  background-color: #3D0B01;
+  transition: all .6s;
+}
+
+.hamburger-overlay__line:nth-of-type(1) { top: 14px; }
+.hamburger-overlay__line:nth-of-type(2) { top: 23px; }
+.hamburger-overlay__line:nth-of-type(3) { top: 32px; }
+
+.hamburger-overlay.active .hamburger-overlay__line {
+  background-color: #fff;
+}
+
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(1) {
+  transform: translateY(9px) rotate(-45deg);
+}
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(2) {
+  opacity: 0;
+}
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #D7C6B6;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .6s;
+  z-index: 900;
+}
+
+.nav-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-overlay__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-overlay__sns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 30px; /* ナビリストとの余白 */
+  padding: 0;
+}
+
+.nav-overlay__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-overlay__item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .6s;
+}
+
+.nav-overlay.active .nav-overlay__item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(1) { transition-delay: 0.1s; }
+.nav-overlay.active .nav-overlay__item:nth-child(2) { transition-delay: 0.2s; }
+.nav-overlay.active .nav-overlay__item:nth-child(3) { transition-delay: 0.3s; }
+.nav-overlay.active .nav-overlay__item:nth-child(4) { transition-delay: 0.4s; }
+
+.nav-overlay__link {
+  display: inline-block;
+  padding: 20px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.nav-overlay__link:hover {
+  color: #3D0B01;
+}
+
+.nav-overlay__sns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.pc {
+  display: none;
+}
+  
+.sp {
+  display: block;
+}
+
+.hero-copy {
+  font-size: 18px;
+  bottom: 5%;
+  right: 3%;
+  padding: 0.8rem 1rem;
+}
+
+.concept-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .concept-slideshow {
+    width: 100%;
+    max-height: none;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .concept-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    z-index: 0;
+  }
+
+  .concept-slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .concept-text {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .text-deco {
+    position: static;
+    margin: 1rem auto 0;
+    display: block;
+    width: 50%;
+  }
+
+
+}
