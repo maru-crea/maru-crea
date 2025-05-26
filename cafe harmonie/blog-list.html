@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafe Harmonie -厳選したスペシャルティコーヒーと手作りスイーツが楽しめる、心安らぐナチュラルカフェです。 "> 
+    <title>Cafe Harmonie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=League+Script&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+    <!-- AOS CSSファイル -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Swiper CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="logo"><img src="images/logo-02.png" alt="harmonie cafe"></h1>
+
+        <!-- ハンバーガーボタン（スマホ用） -->
+        <button class="hamburger-overlay" aria-label="メニュー" aria-controls="overlay-menu" aria-expanded="false">
+          <span class="hamburger-overlay__line"></span>
+          <span class="hamburger-overlay__line"></span>
+          <span class="hamburger-overlay__line"></span>
+        </button>
+
+        <!-- 通常ナビ（PC表s示用） -->
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="#concept">CONCEPT</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#info">INFO</a></li>
+            <li><a href="#review">REVIEW</a></li>
+            <li><a href="#blog">BLOG</a></li>
+          </ul>
+
+          <ul class="nav-sns">
+            <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/x.svg" alt="X"></a></li>
+            <li><a href="#"><img src="images/line.svg" alt="LINE"></a></li>
+          </ul>
+        </nav>
+
+        <!-- オーバーレイナビ（スマホ表示用） -->
+        <nav id="overlay-menu" class="nav-overlay" aria-hidden="true">
+          <div class="nav-overlay__content">
+            <ul class="nav-overlay__list">
+              <li class="nav-overlay__item"><a href="#top" class="nav-overlay__link">TOP</a></li>
+              <li class="nav-overlay__item"><a href="#concept" class="nav-overlay__link">CONCEPT</a></li>
+              <li class="nav-overlay__item"><a href="#menu" class="nav-overlay__link">MENU</a></li>
+              <li class="nav-overlay__item"><a href="#info" class="nav-overlay__link">INFO</a></li>
+              <li class="nav-overlay__item"><a href="#review" class="nav-overlay__link">REVIEW</a></li>
+              <li class="nav-overlay__item"><a href="#blog" class="nav-overlay__link">BLOG</a></li>
+              <li class="nav-overlay__item"><a href="#contact" class="nav-overlay__link">CONTACT</a></li>
+            </ul>
+
+            <!-- SNSリンク用のリストを別で作成 -->
+            <ul class="nav-overlay__sns">
+              <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+              <li><a href="#"><img src="images/x.svg" alt="X"></a></li>
+              <li><a href="#"><img src="images/line.svg" alt="LINE"></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+  <main>
+    <section id="blog">
+      <div class="section-illust illust-left">
+        <img src="images/plant_s_left.png" aria-hidden="true">
+      </div>
+      <div class="section-illust illust-right">
+        <img src="images/plant_l_right.png" alt="" aria-hidden="true">
+      </div>
+
+      <div class="section-header" data-aos="fade-up" data-aos-duration="2000">
+        <h2 class="section-title">Blog</h2>
+        <p class="section-subtitle cafe-name">Cafe Harmonie</p>
+      </div>
+
+      <div class="blog-container">
+        <a href="blog.html" class="blog-link">
+          <div class="blog-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+            <img src="images/blog_1.png" alt="ブログ画像1" class="blog-image">
+            <div class="blog-text">
+              <p class="blog-date">2023年10月1日</p>
+              <p class="blog-text">新メニュー登場！</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="blog.html" class="blog-link">
+          <div class="blog-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+            <img src="images/blog_2.png" alt="ブログ画像2" class="blog-image">
+            <div class="blog-text">
+              <p class="blog-date">2023年9月25日</p>
+              <p class="blog-text">秋の新作スイーツ紹介！</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="blog.html" class="blog-link">
+          <div class="blog-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+            <img src="images/blog_3.png" alt="ブログ画像3" class="blog-image">
+              <div class="blog-text">
+                <p class="blog-date">2023年8月20日</p>
+                <p class="blog-text">新しいスイーツが仲間入り！</p>
+              </div>
+          </div>
+        </a>
+
+        <a href="blog.html" class="blog-link">
+          <div class="blog-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+            <img src="images/blog_5.png" alt="ブログ画像5" class="blog-image">
+            <div class="blog-text">
+              <p class="blog-date">2023年7月10日</p>
+              <p class="blog-text">夏の冷たいドリンク特集</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="blog.html" class="blog-link">
+          <div class="blog-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+            <img src="images/blog_6.png" alt="ブログ画像6" class="blog-image">
+            <div class="blog-text">
+              <p class="blog-date">2023年5月25日</p>
+              <p class="blog-text">母の日スペシャルギフトのご案内</p>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+        
+    </section>
+
+
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-wrapper">
+    
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="images/logo-02.png" alt="harmonie cafe" class="logo">
+        </a>
+      </div>
+      
+      <div class="footer-container">
+        <div class="footer-content">
+          <nav class="nav">
+            <ul class="footer-nav-list">
+              <li><a href="index.html">TOP</a></li>
+              <li><a href="#concept">CONCEPT</a></li>
+              <li><a href="#menu">MENU</a></li>
+              <li><a href="#info">INFO</a></li>
+              <li><a href="#review">REVIEW</a></li>
+              <li><a href="#blog">BLOG</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-nav-sns">
+            <ul class="sns-list">
+              <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+              <li><a href="#"><img src="images/x.svg" alt="X"></a></li>
+              <li><a href="#"><img src="images/line.svg" alt="LINE"></a></li>
+            </ul>
+          </nav>
+        </div>
+        <p>&copy; Café harmonie</p>
+      </div>
+      
+    </div>
+    
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

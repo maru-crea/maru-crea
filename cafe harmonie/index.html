@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafe Harmonie -厳選したスペシャルティコーヒーと手作りスイーツが楽しめる、心安らぐナチュラルカフェです。 "> 
+    <title>Cafe Harmonie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=League+Script&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+    <!-- AOS CSSファイル -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Swiper CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="logo"><img src="images/logo-02.png" alt="harmonie cafe"></h1>
+
+        <!-- ハンバーガーボタン（スマホ用） -->
+        <button class="hamburger-overlay" aria-label="メニュー" aria-controls="overlay-menu" aria-expanded="false">
+          <span class="hamburger-overlay__line"></span>
+          <span class="hamburger-overlay__line"></span>
+          <span class="hamburger-overlay__line"></span>
+        </button>
+
+        <!-- 通常ナビ（PC表s示用） -->
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#top">TOP</a></li>
+            <li><a href="#concept">CONCEPT</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#info">INFO</a></li>
+            <li><a href="#review">REVIEW</a></li>
+            <li><a href="#blog">BLOG</a></li>
+          </ul>
+
+          <ul class="nav-sns">
+            <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/x.svg" alt="X"></a></li>
+            <li><a href="#"><img src="images/line.svg" alt="LINE"></a></li>
+          </ul>
+        </nav>
+
+        <!-- オーバーレイナビ（スマホ表示用） -->
+        <nav id="overlay-menu" class="nav-overlay" aria-hidden="true">
+          <div class="nav-overlay__content">
+            <ul class="nav-overlay__list">
+              <li class="nav-overlay__item"><a href="#top" class="nav-overlay__link">TOP</a></li>
+              <li class="nav-overlay__item"><a href="#concept" class="nav-overlay__link">CONCEPT</a></li>
+              <li class="nav-overlay__item"><a href="#menu" class="nav-overlay__link">MENU</a></li>
+              <li class="nav-overlay__item"><a href="#info" class="nav-overlay__link">INFO</a></li>
+              <li class="nav-overlay__item"><a href="#review" class="nav-overlay__link">REVIEW</a></li>
+              <li class="nav-overlay__item"><a href="#blog" class="nav-overlay__link">BLOG</a></li>
+              <li class="nav-overlay__item"><a href="#contact" class="nav-overlay__link">CONTACT</a></li>
+            </ul>
+
+            <!-- SNSリンク用のリストを別で作成 -->
+            <ul class="nav-overlay__sns">
+              <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+              <li><a href="#"><img src="images/x.svg" alt="X"></a></li>
+              <li><a href="#"><img src="images/line.svg" alt="LINE"></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <!-- PC用画像スライダー -->
+        <div class="hero-slideshow pc">
+          <img src="images/main.jpg" alt="カフェ画像1" class="slide active">
+          <img src="images/main_2.jpg" alt="カフェ画像2" class="slide">
+          <img src="images/main_3.jpg" alt="カフェ画像3" class="slide">
+        </div>
+
+        <!-- スマホ用画像スライダー -->
+        <div class="hero-slideshow sp">
+          <img src="images/sp_main.png" alt="カフェ画像1" class="slide active">
+          <img src="images/sp_main_2.png" alt="カフェ画像2" class="slide">
+          <img src="images/sp_main_3.png" alt="カフェ画像3" class="slide">
+        </div>
+
+        <div class="hero-copy" data-aos="fade-left" data-aos-duration="2000">
+          <p>「香りと調和が生まれる場所。心安らぐひとときを。」</p>
+        </div>
+
+      </section>
+
+      <!-- コンセプト -->
+      <section id="concept">
+        <div class="section-illust illust-left">
+          <img src="images/plant_s_left.png" aria-hidden="true">
+        </div>
+        <div class="section-illust illust-right">
+          <img src="images/plant_l_right.png" alt="" aria-hidden="true">
+        </div>
+
+        <div class="section-header" data-aos="fade-up" data-aos-duration="2000">
+          <h2 class="section-title">Concept</h2>
+          <p class="section-subtitle cafe-name">Cafe Harmonie</p>
+        </div>
+
+        <!-- スライドショー -->
+        <div class="concept-container" data-aos="fade-up" data-aos-duration="2000">
+          <div class="swiper concept-slideshow">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/concept_1.png" alt="コンセプト画像1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/concept_2.png" alt="コンセプト画像2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/concept_3.png" alt="コンセプト画像3" />
+              </div>
+            </div>
+            <!-- ドットナビゲーション -->
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- テキスト部分 -->
+          <div class="concept-text">
+            <h3>こだわり珈琲とスイーツで、ほっと一息。</h3>
+            <img src="images/concept_line.svg" alt="曲線" class="concept-line" />
+            <p>
+              「Cafe Harmonie（カフェ ハーモニー）は、厳選したスペシャルティコーヒーと手作りスイーツが楽しめる、心安らぐナチュラルカフェです。オーナー自ら選び抜いた豆を使い、こだわりのハンドドリップで丁寧に淹れた一杯をお届けします。」
+              <img src="images/concept_coffee.svg" alt="コーヒーとパンのイラスト" class="text-deco" />
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu">
+        <div class="section-illust illust-left">
+          <img src="images/plant_s_left.png" aria-hidden="true">
+        </div>
+        <div class="section-illust illust-right">
+          <img src="images/plant_l_right.png" alt="" aria-hidden="true">
+        </div>
+
+        <div class="section-header" data-aos="fade-up" data-aos-duration="2000">
+          <h2 class="section-title">Menu</h2>
+          <p class="section-subtitle cafe-name">Cafe Harmonie</p>
+        </div>
+
+        <div class="menu-items" data-aos="fade-up" data-aos-duration="2000">
+          <div>
+            <img src="images/menu_drink.png" alt="Coffee">
+            <div class="menu-btn">
+              <a href="drink.html">Drink</a>
+            </div>
+          </div>
+          <div>
+            <img src="images/menu_food.png" alt="Sweets">
+            <div class="menu-btn">
+                <a href="food.html">Food</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="info">
+        <div class="section-illust illust-left">
+          <img src="images/plant_s_left.png" aria-hidden="true">
+        </div>
+        <div class="section-illust illust-right">
+          <img src="images/plant_l_right.png" alt="" aria-hidden="true">
+        </div>
+
+        <div class="section-header" data-aos="fade-up" data-aos-duration="2000">
+          <h2 class="section-title">Info</h2>
+          <p class="section-subtitle cafe-name">Cafe Harmonie</p>
+        </div>
+
+        <div class="info-container" data-aos="fade-up" data-aos-duration="2000">
+          
+          <div class="info-list">
+            
+            <div class="info-item">
+              <p class="info-title">営業時間</p>
+              <p class="info-content">月～金  １０：００〜２０：００<br>土日祝  ９：００〜２１：００</p>
+            </div>
+            <div class="info-item">
+              <p class="info-title">定休日</p>
+              <p class="info-content">水曜日</p>
+            </div>
+            <div class="info-item">
+              <p class="info-title">アクセス</p>
+              <p class="info-content">〒１０５−０００１<br>東京都港区虎ノ門１丁目３−１<br>グローバルスクエア 17階</p>
+            </div>
+            <div class="info-item">
+              <p class="info-title">お問い合わせ</p>
+              <p class="info-content">03-123-4567</p>
+            </div>
+            <div class="info-item">
+              <p class="info-title">駐車スペース</p>
+              <p class="info-content">4台</p>
+            </div>
+
+          </div>
+
+          <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2806732290146!2d139.7494883!3d35.6700904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5f5a18eac5%3A0x2a8366f3652c80e1!2z5p2x5Lqs6JmO44OO6ZaA44Kw44Ot44O844OQ44Or44K544Kv44Ko44Ki!5e0!3m2!1sja!2sjp!4v1747975491873!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="review">
+        <div class="section-illust illust-left">
+          <img src="images/plant_s_left.png" aria-hidden="true">
+        </div>
+        <div class="section-illust illust-right">
+          <img src="images/plant_l_right.png" alt="" aria-hidden="true">
+        </div>
+
+        <div class="section-header" data-aos="fade-up" data-aos-duration="2000">
+          <h2 class="section-title">Review</h2>
+          <p class="section-subtitle cafe-name">Cafe Harmonie</p>
+        </div>
+
+        <div class="review-container">
+          <div class="review-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+            <img src="images/review_1.png" alt="レビュー画像1" class="review-image">
+            <p class="review-text">「コーヒーの香りが最高！スイーツも美味しい！」</p>
+            <p class="review-name">田中太郎</p>
+          </div>
+          <div class="review-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+            <img src="images/review_2.png" alt="レビュー画像2" class="review-image">
+            <p class="review-text">「落ち着いた雰囲気で、ゆっくり過ごせました。」</p>
+            <p class="review-name">佐藤花子</p>
+          </div>
+          <div class="review-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+            <img src="images/review_3.png" alt="レビュー画像3" class="review-image">
+            <p class="review-text">「友達と一緒に行きました。楽しい時間を過ごせました！」</p>
+            <p class="review-name">鈴木次郎</p>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="blog">
+        <div class="section-illust illust-left">
+          <img src="images/plant_s_left.png" aria-hidden="true">
+        </div>
+        <div class="section-illust illust-right">
+          <img src="images/plant_l_right.png" alt="" aria-hidden="true">
+        </div>
+
+        <div class="section-header" data-aos="fade-up" data-aos-duration="2000">
+          <h2 class="section-title">Blog</h2>
+          <p class="section-subtitle cafe-name">Cafe Harmonie</p>
+        </div>
+
+        <div class="blog-container">
+          <a href="blog.html" class="blog-link">
+            <div class="blog-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+              <img src="images/blog_1.png" alt="ブログ画像1" class="blog-image">
+              <div class="blog-text">
+                <p class="blog-date">2023年10月1日</p>
+                <p class="blog-text">新メニュー登場！</p>
+              </div>
+            </div>
+          </a>
+          <a href="blog.html" class="blog-link">
+            <div class="blog-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+              <img src="images/blog_2.png" alt="ブログ画像2" class="blog-image">
+              <div class="blog-text">
+                <p class="blog-date">2023年9月25日</p>
+                <p class="blog-text">秋の新作スイーツ紹介！</p>
+              </div>
+            </div>
+          </a>
+          <a href="blog.html" class="blog-link">
+            <div class="blog-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+              <img src="images/blog_3.png" alt="ブログ画像3" class="blog-image">
+              <div class="blog-text">
+                <p class="blog-date">2023年8月20日</p>
+                <p class="blog-text">新しいスイーツが仲間入り！</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="menu-btn">
+          <a href="blog-list.html">More</a>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer id="footer">
+      <div class="footer-wrapper">
+      
+        <div class="footer-logo">
+          <a href="index.html">
+            <img src="images/logo-02.png" alt="harmonie cafe" class="logo">
+          </a>
+        </div>
+        
+        <div class="footer-container">
+          <div class="footer-content">
+            <nav class="nav">
+              <ul class="footer-nav-list">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="#concept">CONCEPT</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#info">INFO</a></li>
+                <li><a href="#review">REVIEW</a></li>
+                <li><a href="#blog">BLOG</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-nav-sns">
+              <ul class="sns-list">
+                <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+                <li><a href="#"><img src="images/x.svg" alt="X"></a></li>
+                <li><a href="#"><img src="images/line.svg" alt="LINE"></a></li>
+              </ul>
+            </nav>
+          </div>
+          <p>&copy; Café harmonie</p>
+        </div>
+        
+      </div>
+      
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
